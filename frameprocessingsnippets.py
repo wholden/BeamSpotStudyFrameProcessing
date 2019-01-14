@@ -19,6 +19,11 @@ def plotly_show():
     plotlyfig['layout']['yaxis1']['titlefont']['size']=16
     plotlyfig['layout']['showlegend'] = True
     
+    #add a fix to bring back automatic sizing
+    plotlyfig['layout']['height'] = None
+    plotlyfig['layout']['width'] = None
+    plotlyfig['layout']['autosize'] = True
+    
     # plot
     py.iplot(plotlyfig)
 
